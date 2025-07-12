@@ -1,12 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 import "../styles/global.css";
 import type { DataJSON } from "../data/info.type";
+
+
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 import informacion from "../data/miinfo.json";
 import WorkExperience from '../components/sections/WorkExperience.astro'
+import Languaje from '../components/sections/Lenguaje.astro'
+import Education from '../components/sections/Education.astro'
 
-const { descripcionPerfil, experienciasLaborales } = informacion as DataJSON;
+
+const { descripcionPerfil, experienciasLaborales, idiomas, educacion } = informacion as DataJSON;
+
 ---
 
 <Layout>
@@ -15,6 +21,11 @@ const { descripcionPerfil, experienciasLaborales } = informacion as DataJSON;
     {/* Main Content */}
     <div class="lg:col-span-2 space-y-8">
 		<WorkExperience experienciaLaboral={experienciasLaborales}/>
+    <Education education={educacion}/>
 	</div>
+  <div class="space-y-8">
+    {/* Slider Content */}
+    <Languaje languaje={idiomas}/>
+  </div>
   </div>
 </Layout>

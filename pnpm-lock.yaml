@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@lucide/astro':
+    specifier: ^0.525.0
+    version: 0.525.0(astro@5.11.0)
   '@tailwindcss/vite':
     specifier: ^4.1.11
     version: 4.1.11(vite@6.3.5)
@@ -17,9 +20,6 @@ dependencies:
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
-  lucide-static:
-    specifier: ^0.525.0
-    version: 0.525.0
   tailwind-merge:
     specifier: ^3.3.1
     version: 3.3.1
@@ -581,6 +581,14 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.4
+    dev: false
+
+  /@lucide/astro@0.525.0(astro@5.11.0):
+    resolution: {integrity: sha512-CjX9aJlmHg5/Io6mRSrSi3TbwRXtrV/6kwsRjv6eVhBymAA8ogq3j8YrV1PsXn1EHK9HFyzeJOhaXGm00acVLg==}
+    peerDependencies:
+      astro: ^4 || ^5
+    dependencies:
+      astro: 5.11.0(typescript@5.8.3)
     dev: false
 
   /@oslojs/encoding@1.1.0:
@@ -1891,10 +1899,6 @@ packages:
 
   /lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
-    dev: false
-
-  /lucide-static@0.525.0:
-    resolution: {integrity: sha512-dPQiibOV/kRv/UnaNFbiTxdDFZ267rIjHVWLv6GoUXVD5YSW71cyF4tYJVD27zSb0OOWdeWrqZsuBtRaYc4FHw==}
     dev: false
 
   /magic-string@0.30.17:
