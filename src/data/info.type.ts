@@ -8,14 +8,7 @@ export type DataJSON = {
             link: string;
         }>;
     };
-    experienciasLaborales: Array<{
-        empresa: string;
-        cargo: string;
-        fechaDesde: string;
-        fechaHasta: string;
-        descripcionPuesto: string;
-        habilidades: Array<string>;
-    }>;
+    experienciasLaborales: ExperienciaLaboral;
     educacion: Array<{
         titulo: string;
         institucion: string;
@@ -32,3 +25,12 @@ export type DataJSON = {
         nivel: string;
     }>;
 };
+
+export type ExperienciaLaboral = Array<{
+        empresa: string;
+        cargo: string;
+        fechaDesde: string;
+        fechaHasta: string;
+        descripcionPuesto: string;
+        habilidades: Array<string>;
+    }>

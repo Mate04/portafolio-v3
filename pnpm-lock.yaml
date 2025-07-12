@@ -14,9 +14,15 @@ dependencies:
   class-variance-authority:
     specifier: ^0.7.1
     version: 0.7.1
+  clsx:
+    specifier: ^2.1.1
+    version: 2.1.1
   lucide-static:
     specifier: ^0.525.0
     version: 0.525.0
+  tailwind-merge:
+    specifier: ^3.3.1
+    version: 3.3.1
   tailwindcss:
     specifier: ^4.1.11
     version: 4.1.11
@@ -2778,6 +2784,10 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       ansi-regex: 6.1.0
+    dev: false
+
+  /tailwind-merge@3.3.1:
+    resolution: {integrity: sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==}
     dev: false
 
   /tailwindcss@4.1.11:

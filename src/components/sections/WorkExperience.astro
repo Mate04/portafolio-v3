@@ -1,0 +1,51 @@
+---
+import Title from "../Title.astro";
+import { Badge, Card, CardContent } from "../cards";
+import type { ExperienciaLaboral } from "../../data/info.type";
+import {obtenerMesAbreviado} from '../../utils/getMothString'
+export interface Props {
+  experienciaLaboral: ExperienciaLaboral;
+}
+
+const { experienciaLaboral } = Astro.props;
+---
+
+<section>
+  <Title title="Experiencia laboral" />
+  <div class="space-y-6">
+    {
+      experienciaLaboral.map(
+        ({
+          cargo,
+          empresa,
+          fechaDesde,
+          fechaHasta,
+          descripcionPuesto,
+          habilidades,
+        }) => {
+          return (
+            <Card class="rounded-xl border border-gray-200 bg-white shadow-sm p-6">
+              <CardContent className="p-6">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900">{cargo}</h3>
+                    <p class="text-blue-600 font-medium">{empresa}</p>
+                  </div>
+                  <span class="text-sm text-gray-500 mt-1 md:mt-0">
+                    {obtenerMesAbreviado(fechaDesde)} - {obtenerMesAbreviado(fechaHasta)}
+                  </span>
+                </div>
+                <p class="text-gray-700 mb-3">{descripcionPuesto}</p>
+                <div class="flex flex-wrap gap-2 font-semibold">
+                  {habilidades.map((h) => (
+                    <Badge variant="outline">{h}</Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          );
+        }
+      )
+    }
+  </div>
+</section>

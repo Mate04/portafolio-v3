@@ -1,14 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro'
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
-import type {DataJSON} from '../data/info.type'
-import informacion from '../data/miinfo.json'
+import type { DataJSON } from "../data/info.type";
+import informacion from "../data/miinfo.json";
+import WorkExperience from '../components/sections/WorkExperience.astro'
 
-const {descripcionPerfil} = informacion as DataJSON;
+const { descripcionPerfil, experienciasLaborales } = informacion as DataJSON;
 ---
 
 <Layout>
-	<Header informacion={descripcionPerfil}/>
-	<div>Hola</div>
+  <Header informacion={descripcionPerfil} />
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    {/* Main Content */}
+    <div class="lg:col-span-2 space-y-8">
+		<WorkExperience experienciaLaboral={experienciasLaborales}/>
+	</div>
+  </div>
 </Layout>
