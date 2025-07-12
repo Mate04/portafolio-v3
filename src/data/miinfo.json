@@ -1,0 +1,112 @@
+{
+  "descripcionPerfil": "Ingeniero en Sistemas con más de 5 años de experiencia en la industria, actualmente cursando la carrera universitaria. Especializado en desarrollo de soluciones tecnológicas innovadoras, con un fuerte enfoque en aprendizaje continuo y crecimiento profesional.",
+  "puesto": "Ingeniero de Sistemas de Información",
+  "contacto": {
+    "ciudadPais": "Córdoba, Argentina",
+    "redesSociales": [
+      {
+        "nombre": "Email",
+        "link": "mailto:mateoemaldonado@gmail.com"
+      }
+    ]
+  },
+  "experienciasLaborales": [
+    {
+      "empresa": "Lotería de Córdoba",
+      "cargo": "Desarrollador full stack",
+      "fechaDesde": "11, 24",
+      "fechaHasta": "actualidad",
+      "descripcionPuesto": "Desarrollador de sistema de juego responsable para la regularización de usuarios de la provincia de Córdoba.",
+      "habilidades": [
+        "JSON",
+        "Tecnologías web",
+        "HTML",
+        "Desarrollo de API",
+        "Diseño web",
+        "Next.js",
+        "GitHub",
+        "Programación",
+        "Gestión de proyectos",
+        "Atención al detalle",
+        "Node.js"
+      ]
+    },
+    {
+      "empresa": "OctiGames",
+      "cargo": "Desarrollador web",
+      "fechaDesde": "01, 24",
+      "fechaHasta": "03, 24",
+      "descripcionPuesto": "En este proyecto, fui responsable del desarrollo y diseño de la página web.",
+      "habilidades": [
+        "JavaScript",
+        "Experiencia de usuario",
+        "JSON",
+        "Tecnologías web",
+        "HTML",
+        "Desarrollo de API",
+        "Diseño web",
+        "Next.js",
+        "GitHub",
+        "Programación",
+        "Gestión de proyectos"
+      ]
+    }
+  ],
+  "educacion": [
+    {
+      "titulo": "Ingeniería en Sistemas",
+      "institucion": "Universidad Tecnológica Nacional",
+      "fechaDesde": "2022",
+      "fechaHasta": "2027",
+      "certificadoPDF": ""
+    },
+    {
+      "titulo": "Educación Secundaria Obligatoria (ESO)",
+      "institucion": "Centro Educacional San Jorge",
+      "fechaDesde": "2008",
+      "fechaHasta": "2021",
+      "certificadoPDF": ""
+    }
+  ],
+  "habilidades": [
+    { "nombre": "UI/UX",               "area": "frontend" },
+    { "nombre": "Experiencia de usuario",   "area": "frontend" },
+    { "nombre": "Diseño de sistemas",       "area": "product manager" },
+    { "nombre": "Base de datos relacional", "area": "base de datos" },
+    { "nombre": "Gestión de proyectos",     "area": "product manager" },
+    { "nombre": "JavaScript",               "area": "frontend" },
+    { "nombre": "Python",                   "area": "backend" },
+    { "nombre": "Node.js",                  "area": "backend" },
+    { "nombre": "PowerShell",               "area": "backend" },
+    { "nombre": "Java",                     "area": "backend" },
+    { "nombre": "MySQL",                    "area": "base de datos" },
+    { "nombre": "HTML",                     "area": "frontend" },
+    { "nombre": "TypeScript",               "area": "frontend" },
+    { "nombre": ".NET Framework",           "area": "backend" },
+    { "nombre": "Tecnologías web",          "area": "frontend" },
+    { "nombre": "Sistemas informáticos",    "area": "backend" },
+    { "nombre": "Programación",             "area": "backend" },
+    { "nombre": "Next.js",                  "area": "frontend" },
+    { "nombre": "React.js",                 "area": "frontend" },
+    { "nombre": "FastAPI",                  "area": "backend" },
+    { "nombre": "Docker",                   "area": "dev-ops" },
+    { "nombre": "JSON",                     "area": "backend" },
+    { "nombre": "Metodologías ágiles",      "area": "product manager" },
+    { "nombre": "Atención al detalle",      "area": "product manager" },
+    { "nombre": "Microservicios",           "area": "backend" },
+    { "nombre": "Metodologías de desarrollo de software", "area": "product manager" },
+    { "nombre": "Estructuras de datos",     "area": "backend" },
+    { "nombre": "Algoritmos",               "area": "backend" },
+    { "nombre": "Scrum",                    "area": "product manager" }
+  ],
+  "idiomas": [
+    {
+      "idioma": "Español",
+      "nivel": "Fluido"
+    },
+    {
+      "idioma": "Inglés",
+      "nivel": "C1"
+    }
+  ]
+}

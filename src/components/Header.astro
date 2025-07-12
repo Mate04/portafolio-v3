@@ -1,0 +1,26 @@
+---
+import Button from "./Button.astro";
+import { Download } from "lucide-static";
+export interface Props {
+  informacion: string;
+}
+
+const { informacion } = Astro.props;
+---
+
+<header class="mb-8">
+  <div
+    class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+  >
+    <div>
+      <h1 class="text-4xl font-bold text-gray-900 mb-2">Mateo Maldonado</h1>
+      <p class="text-xl text-gray-600 mb-4">
+        Ingeniero de Sistemas de Información
+      </p>
+      <p class="text-gray-700 max-w-2xl">
+        {informacion}
+      </p>
+    </div>
+    <Button variant="default" size="lg" class="w-fit gap-2 px-6">Descargar CV</Button>
+  </div>
+</header>
