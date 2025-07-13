@@ -30,11 +30,11 @@ export default function SkillFilter({ skills }: Props) {
       : skills.filter((skill) => skill.areas.includes(selected));
 
   return (
-    <section>
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">
+    <section className="my-9">
+      <div className="space-y-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
         Habilidades Técnicas
       </h2>
-      <div className="space-y-6">
         <Card>
           <CardContent className="p-6">
             <div className="mb-4">

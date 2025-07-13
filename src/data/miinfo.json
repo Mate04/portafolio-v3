@@ -5,8 +5,20 @@
     "ciudadPais": "Córdoba, Argentina",
     "redesSociales": [
       {
-        "nombre": "Email",
-        "link": "mailto:mateoemaldonado@gmail.com"
+        "nombre": "Mail",
+        "link": "mateoemaldonado@gmail.com"
+      },
+      {
+        "nombre": "Linkedin",
+        "link": "https://www.linkedin.com/in/mateo-maldonado-74b9b4171/"
+      },
+      {
+        "nombre": "GitHub",
+        "link": "https://github.com/Mate04"
+      },
+      {
+        "nombre": "Discord",
+        "link": "todavia no esta jaja"
       }
     ]
   },
@@ -70,35 +82,35 @@
     }
   ],
   "habilidades": [
-    { "nombre": "UI/UX",               "areas": ["frontend"] },
-    { "nombre": "Experiencia de usuario","areas": ["frontend"] },
-    { "nombre": "Diseño de sistemas",  "areas": ["product manager"] },
-    { "nombre": "Base de datos relacional","areas": ["base de datos"] },
-    { "nombre": "Gestión de proyectos","areas": ["product manager"] },
-    { "nombre": "JavaScript",          "areas": ["frontend","backend"] },
-    { "nombre": "Python",              "areas": ["backend"] },
-    { "nombre": "Node.js",             "areas": ["backend"] },
-    { "nombre": "PowerShell",          "areas": ["backend"] },
-    { "nombre": "Java",                "areas": ["backend"] },
-    { "nombre": "MySQL",               "areas": ["base de datos"] },
-    { "nombre": "HTML",                "areas": ["frontend"] },
-    { "nombre": "TypeScript",          "areas": ["frontend","backend"] },
-    { "nombre": ".NET Framework",      "areas": ["backend"] },
-    { "nombre": "Tecnologías web",     "areas": ["frontend"] },
-    { "nombre": "Sistemas informáticos","areas": ["backend"] },
-    { "nombre": "Programación",        "areas": ["backend"] },
-    { "nombre": "Next.js",             "areas": ["frontend"] },
-    { "nombre": "React.js",            "areas": ["frontend"] },
-    { "nombre": "FastAPI",             "areas": ["backend"] },
-    { "nombre": "Docker",              "areas": ["dev-ops","backend"] },
-    { "nombre": "JSON",                "areas": ["backend"] },
-    { "nombre": "Metodologías ágiles", "areas": ["product manager"] },
-    { "nombre": "Atención al detalle", "areas": ["product manager"] },
-    { "nombre": "Microservicios",      "areas": ["backend"] },
-    { "nombre": "Metodologías de desarrollo de software","areas": ["product manager"] },
-    { "nombre": "Estructuras de datos","areas": ["backend"] },
-    { "nombre": "Algoritmos",          "areas": ["backend"] },
-    { "nombre": "Scrum",               "areas": ["product manager"] }
+    { "nombre": "UI/UX",               "areas": ["Frontend"] },
+    { "nombre": "Experiencia de usuario","areas": ["Frontend"] },
+    { "nombre": "Diseño de sistemas",  "areas": ["Product manager"] },
+    { "nombre": "Base de datos relacional","areas": ["Base de datos"] },
+    { "nombre": "Gestión de proyectos","areas": ["Product manager"] },
+    { "nombre": "JavaScript",          "areas": ["Frontend","Backend"] },
+    { "nombre": "Python",              "areas": ["Backend"] },
+    { "nombre": "Node.js",             "areas": ["Backend"] },
+    { "nombre": "PowerShell",          "areas": ["Backend"] },
+    { "nombre": "Java",                "areas": ["Backend"] },
+    { "nombre": "MySQL",               "areas": ["Base de datos"] },
+    { "nombre": "HTML",                "areas": ["Frontend"] },
+    { "nombre": "TypeScript",          "areas": ["Frontend","Backend"] },
+    { "nombre": ".NET Framework",      "areas": ["Backend"] },
+    { "nombre": "Tecnologías web",     "areas": ["Frontend"] },
+    { "nombre": "Sistemas informáticos","areas": ["Backend"] },
+    { "nombre": "Programación",        "areas": ["Backend"] },
+    { "nombre": "Next.js",             "areas": ["Frontend"] },
+    { "nombre": "React.js",            "areas": ["Frontend"] },
+    { "nombre": "FastAPI",             "areas": ["Backend"] },
+    { "nombre": "Docker",              "areas": ["DevOps","Backend"] },
+    { "nombre": "JSON",                "areas": ["Backend"] },
+    { "nombre": "Metodologías ágiles", "areas": ["Product manager"] },
+    { "nombre": "Atención al detalle", "areas": ["Product manager"] },
+    { "nombre": "Microservicios",      "areas": ["Backend"] },
+    { "nombre": "Metodologías de desarrollo de software","areas": ["Product manager"] },
+    { "nombre": "Estructuras de datos","areas": ["Backend"] },
+    { "nombre": "Algoritmos",          "areas": ["Backend"] },
+    { "nombre": "Scrum",               "areas": ["Product manager"] }
   ],
   "idiomas": [
     {

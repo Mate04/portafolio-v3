@@ -1,0 +1,14 @@
+---
+import { Icon } from "astro-icon/components";
+
+// Puedes recibir props si querés cambiar color, tamaño, etc.
+const { size = 24, color = "currentColor", class: className = "" } = Astro.props;
+---
+<Icon 
+  name="discord" 
+  width={size}
+  height={size}
+  color={color}
+  class={className}
+/>
+

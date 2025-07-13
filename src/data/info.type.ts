@@ -3,10 +3,7 @@ export type DataJSON = {
   puesto: string;
   contacto: {
     ciudadPais: string;
-    redesSociales: Array<{
-      nombre: string;
-      link: string;
-    }>;
+    redesSociales: SocialNetwork;
   };
   experienciasLaborales: ExperienciaLaboral;
   educacion: Education;
@@ -41,3 +38,10 @@ export type Skills = Array<{
   nombre: string;
   areas: Array<string>;
 }>;
+
+export type NameSocialNetwork = "Mail" | "GitHub" | "Linkedin" | "Discord"
+
+export type SocialNetwork = Array<{
+      nombre: NameSocialNetwork;
+      link: string;
+    }>;

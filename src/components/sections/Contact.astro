@@ -1,0 +1,62 @@
+---
+import type {SocialNetwork} from '../../data/info.type'
+
+import {Card, CardContent} from '../cards'
+import {  MapPin, MailIcon, Github, Linkedin } from '@lucide/astro'
+import Separator from '../Separtor.astro'
+import Button from '../Button.astro'
+import Discord from '../icon/Discord.astro'
+
+
+interface Props {
+    socialNetWork: SocialNetwork
+    place: string
+}
+//const Discord = 
+const iconMap: Record<string, any> = {
+    'GitHub': Github,
+    'Linkedin': Linkedin,
+    'Discord': Discord,
+}
+
+const {place,socialNetWork} = Astro.props
+
+const getMail = socialNetWork.find(value => value.nombre == 'Mail')?.link || 'mateoemaldonado@gmail.com'
+const socialNetworkWithOutMail = socialNetWork.filter(value => value.nombre !== 'Mail')
+---
+
+<section class="sticky top-8">
+    <Card>
+        <CardContent class='p-6'>
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Contacto</h3>
+            <div class="space-y-3">
+            <div class="flex items-center gap-5">
+                    <MailIcon class="w-4 h-4 text-gray-500" />
+                    <a href=`mailto:${getMail}` class="text-sm text-gray-700 hover:text-blue-600">
+                      {getMail}
+                    </a>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <MapPin class="w-4 h-4 text-gray-500" />
+                    <span class="text-sm text-gray-700">{place}</span>
+                  </div>
+                  </div>
+                  <Separator class="my-4 border-t border-gray-200"/>
+                  <div class="flex gap-2">
+                    {
+                        socialNetworkWithOutMail.map(({link,nombre})=>{
+                            const Icon = iconMap[nombre] || null
+                            return (
+                                <a href={link} target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" class="p-2">
+                                
+    {Icon && <Icon class="w-4 h-4" />}
+                            </Button>
+                            </a>
+
+                        )})
+                    }
+                  </div>
+        </CardContent>
+    </Card>
+</section>
