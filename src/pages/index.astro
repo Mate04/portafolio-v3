@@ -9,9 +9,10 @@ import informacion from "../data/miinfo.json";
 import WorkExperience from '../components/sections/WorkExperience.astro'
 import Languaje from '../components/sections/Lenguaje.astro'
 import Education from '../components/sections/Education.astro'
+import Skills from '../components/sections/Skills.astro'
+import SkillsTest from '../components/sections/SkillsTest'
 
-
-const { descripcionPerfil, experienciasLaborales, idiomas, educacion } = informacion as DataJSON;
+const { descripcionPerfil, experienciasLaborales, idiomas, educacion, habilidades } = informacion as DataJSON;
 
 ---
 
@@ -22,6 +23,9 @@ const { descripcionPerfil, experienciasLaborales, idiomas, educacion } = informa
     <div class="lg:col-span-2 space-y-8">
 		<WorkExperience experienciaLaboral={experienciasLaborales}/>
     <Education education={educacion}/>
+    <Skills skills={habilidades}/>
+    <!--TODO: tira bug -->
+    <!-- <SkillsTest/> -->
 	</div>
   <div class="space-y-8">
     {/* Slider Content */}

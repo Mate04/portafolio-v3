@@ -1,0 +1,24 @@
+---
+import Title from "../Title.astro";
+import type { Skills } from "../../data/info.type";
+interface Props {
+  skills: Skills;
+}
+
+const { skills } = Astro.props;
+
+const areaLabels: Record<string, string> = skills.reduce(
+  (acc, item) => {
+    if (!acc[item.area]) {
+      acc[item.area] = item.area;
+    }
+    return acc;
+  },
+  {} as Record<string, string>
+);
+---
+
+<section>
+  <Title title="Skills" />
+  <div class="space-y-6"></div>
+</section>

@@ -10,10 +10,7 @@ export type DataJSON = {
   };
   experienciasLaborales: ExperienciaLaboral;
   educacion: Education;
-  habilidades: Array<{
-    nombre: string;
-    area: string;
-  }>;
+  habilidades: Skills;
   idiomas: Languaje;
 };
 
@@ -39,3 +36,8 @@ export type Education = Array<{
   certificadoPDF: string;
   descripcion?:string;
 }>;
+
+export type Skills = Array<{
+    nombre: string;
+    area: string;
+  }>
