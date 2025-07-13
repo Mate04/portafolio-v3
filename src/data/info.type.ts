@@ -34,10 +34,10 @@ export type Education = Array<{
   fechaDesde: string;
   fechaHasta: string;
   certificadoPDF: string;
-  descripcion?:string;
+  descripcion?: string;
 }>;
 
 export type Skills = Array<{
-    nombre: string;
-    area: string;
-  }>
+  nombre: string;
+  areas: Array<string>;
+}>;
