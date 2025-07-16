@@ -25,22 +25,20 @@
   "experienciasLaborales": [
     {
       "empresa": "Lotería de Córdoba",
-      "cargo": "Desarrollador full stack",
+      "cargo": "Desarrollador Backend Juego Online",
       "fechaDesde": "11, 24",
       "fechaHasta": "actualidad",
       "descripcionPuesto": "Desarrollador de sistema de juego responsable para la regularización de usuarios de la provincia de Córdoba.",
       "habilidades": [
-        "JSON",
-        "Tecnologías web",
         "HTML",
-        "Desarrollo de API",
-        "Diseño web",
-        "Next.js",
+        "Desarrollador de API",
+        "Nest",
         "GitHub",
         "Programación",
         "Gestión de proyectos",
         "Atención al detalle",
-        "Node.js"
+        "Node.js",
+        "TypeScript"
       ]
     },
     {
@@ -48,18 +46,14 @@
       "cargo": "Desarrollador web",
       "fechaDesde": "01, 24",
       "fechaHasta": "03, 24",
-      "descripcionPuesto": "En este proyecto, fui responsable del desarrollo y diseño de la página web.",
+      "descripcionPuesto": "Responsable del diseño y desarrollo del sitio web de OctiGames.",
       "habilidades": [
         "JavaScript",
         "Experiencia de usuario",
-        "JSON",
         "Tecnologías web",
         "HTML",
         "Desarrollo de API",
-        "Diseño web",
         "Next.js",
-        "GitHub",
-        "Programación",
         "Gestión de proyectos"
       ]
     }
@@ -89,33 +83,27 @@
     { "nombre": "Gestión de proyectos","areas": ["Product manager"] },
     { "nombre": "JavaScript",          "areas": ["Frontend","Backend"] },
     { "nombre": "Python",              "areas": ["Backend"] },
-    { "nombre": "Node.js",             "areas": ["Backend"] },
+    { "nombre": "Node",             "areas": ["Backend"] },
     { "nombre": "PowerShell",          "areas": ["Backend"] },
     { "nombre": "Java",                "areas": ["Backend"] },
     { "nombre": "MySQL",               "areas": ["Base de datos"] },
     { "nombre": "HTML",                "areas": ["Frontend"] },
     { "nombre": "TypeScript",          "areas": ["Frontend","Backend"] },
     { "nombre": ".NET Framework",      "areas": ["Backend"] },
-    { "nombre": "Tecnologías web",     "areas": ["Frontend"] },
-    { "nombre": "Sistemas informáticos","areas": ["Backend"] },
-    { "nombre": "Programación",        "areas": ["Backend"] },
-    { "nombre": "Next.js",             "areas": ["Frontend"] },
-    { "nombre": "React.js",            "areas": ["Frontend"] },
+    { "nombre": "Next",             "areas": ["Frontend"] },
+    { "nombre": "React",            "areas": ["Frontend"] },
     { "nombre": "FastAPI",             "areas": ["Backend"] },
     { "nombre": "Docker",              "areas": ["DevOps","Backend"] },
-    { "nombre": "JSON",                "areas": ["Backend"] },
     { "nombre": "Metodologías ágiles", "areas": ["Product manager"] },
-    { "nombre": "Atención al detalle", "areas": ["Product manager"] },
     { "nombre": "Microservicios",      "areas": ["Backend"] },
     { "nombre": "Metodologías de desarrollo de software","areas": ["Product manager"] },
     { "nombre": "Estructuras de datos","areas": ["Backend"] },
-    { "nombre": "Algoritmos",          "areas": ["Backend"] },
     { "nombre": "Scrum",               "areas": ["Product manager"] }
   ],
   "idiomas": [
     {
       "idioma": "Español",
-      "nivel": "Fluido"
+      "nivel": "Nativo"
     },
     {
       "idioma": "Inglés",
