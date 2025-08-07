@@ -30,17 +30,13 @@
       "fechaHasta": "present",
       "descripcionPuesto": "Developer of a responsible gaming system for the regulation of users in the province of Córdoba.",
       "habilidades": [
-        "JSON",
-        "Web technologies",
-        "HTML",
         "API development",
-        "Web design",
-        "Next.js",
+        "Nest",
         "GitHub",
-        "Programming",
         "Project management",
-        "Attention to detail",
-        "Node.js"
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL"
       ]
     },
     {
@@ -110,7 +106,12 @@
     { "nombre": "Software development methodologies", "areas": ["Product manager"] },
     { "nombre": "Data structures",     "areas": ["Backend"] },
     { "nombre": "Algorithms",          "areas": ["Backend"] },
-    { "nombre": "Scrum",               "areas": ["Product manager"] }
+    { "nombre": "Scrum",               "areas": ["Product manager"] },
+    { "nombre": "Git",                 "areas": ["DevOps","Backend","Frontend"] },
+    { "nombre": "PostgreSQL",          "areas": ["Database"] },
+    { "nombre": "Nest",             "areas": ["Backend"] },
+    { "nombre": "REST API",            "areas": ["Backend"] },
+    { "nombre": "API development",     "areas": ["Backend"] }
   ],
   "idiomas": [
     {

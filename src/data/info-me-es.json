@@ -30,15 +30,13 @@
       "fechaHasta": "actualidad",
       "descripcionPuesto": "Desarrollador de sistema de juego responsable para la regularización de usuarios de la provincia de Córdoba.",
       "habilidades": [
-        "HTML",
         "Desarrollador de API",
         "Nest",
         "GitHub",
-        "Programación",
         "Gestión de proyectos",
-        "Atención al detalle",
         "Node.js",
-        "TypeScript"
+        "TypeScript",
+        "PostgreSQL"
       ]
     },
     {
@@ -98,7 +96,12 @@
     { "nombre": "Microservicios",      "areas": ["Backend"] },
     { "nombre": "Metodologías de desarrollo de software","areas": ["Product manager"] },
     { "nombre": "Estructuras de datos","areas": ["Backend"] },
-    { "nombre": "Scrum",               "areas": ["Product manager"] }
+    { "nombre": "Scrum",               "areas": ["Product manager"] },
+    { "nombre": "Git",                 "areas": ["DevOps","Backend","Frontend"] },
+    { "nombre": "PostgreSQL",          "areas": ["Base de datos"] },
+    { "nombre": "Nest",                "areas": ["Backend"] },
+    { "nombre": "API REST",            "areas": ["Backend"] },
+    { "nombre": "Desarrollo de API",   "areas": ["Backend"] }
   ],
   "idiomas": [
     {
