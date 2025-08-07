@@ -1,10 +1,14 @@
 ---
+import { getLangFromUrl, useTranslations } from "../utils/languaje.utils";
 import Button from "./Button.astro";
 export interface Props {
   informacion: string;
 }
 
 const { informacion } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 
 <header class="mb-8">
@@ -14,12 +18,12 @@ const { informacion } = Astro.props;
     <div>
       <h1 class="text-4xl font-bold text-gray-900 mb-2">Mateo Maldonado</h1>
       <p class="text-xl text-gray-600 mb-4">
-        Ingeniero de Sistemas de Información
+        {t('title')}
       </p>
       <p class="text-gray-700 max-w-2xl">
         {informacion}
       </p>
     </div>
-    <Button variant="default" size="lg" class="w-fit gap-2 px-6">Descargar CV</Button>
+    <Button variant="default" size="lg" class="w-fit gap-2 px-6 font-bold">{t('dowload')}</Button>
   </div>
 </header>

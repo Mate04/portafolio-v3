@@ -1,7 +1,13 @@
-export const obtenerMesAbreviado = (mes: string): string => {
-  if (mes.toLowerCase() === 'actualidad') return 'actualidad';
 
-  const meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+
+export const obtenerMesAbreviado = (mes: string, languaje:'es'|'en'='es'): string => {
+  if (mes.toLowerCase() === 'actualidad' ) return 'actualidad';
+  if(mes.toLowerCase() === 'present') return 'present'
+
+  
+  const meses = languaje === 'es'
+  ? ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+  : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   const [mesStr, anioStr] = mes.split(',').map(s => s.trim());
 

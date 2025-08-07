@@ -2,16 +2,19 @@
 import Title from "../Title.astro";
 import type { Education } from "../../data/info.type";
 import { Card, CardContent } from "../cards";
+import { getLangFromUrl, useTranslations } from "../../utils/languaje.utils";
 
 interface Props {
   education: Education;
 }
 
 const { education } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section>
-  <Title title="Educacion" />
+  <Title title={t('Education')} />
   <div class="space-y-4">
     {
       education.map(

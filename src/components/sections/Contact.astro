@@ -6,6 +6,7 @@ import {  MapPin, MailIcon, Github, Linkedin } from '@lucide/astro'
 import Separator from '../Separtor.astro'
 import Button from '../Button.astro'
 import Discord from '../icon/Discord.astro'
+import { getLangFromUrl, useTranslations } from '../../utils/languaje.utils'
 
 
 interface Props {
@@ -20,6 +21,8 @@ const iconMap: Record<string, any> = {
 }
 
 const {place,socialNetWork} = Astro.props
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const getMail = socialNetWork.find(value => value.nombre == 'Mail')?.link || 'mateoemaldonado@gmail.com'
 const socialNetworkWithOutMail = socialNetWork.filter(value => value.nombre !== 'Mail')
@@ -28,7 +31,7 @@ const socialNetworkWithOutMail = socialNetWork.filter(value => value.nombre !== 
 <section class="sticky top-8">
     <Card>
         <CardContent class='p-6'>
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">Contacto</h3>
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">{t('Contant')}</h3>
             <div class="space-y-3">
             <div class="flex items-center gap-5">
                     <MailIcon class="w-4 h-4 text-gray-500" />

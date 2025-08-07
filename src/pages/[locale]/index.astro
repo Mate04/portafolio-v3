@@ -1,0 +1,59 @@
+---
+import "../../styles/global.css";
+import type { DataJSON } from "../../data/info.type";
+
+
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+//import informacion from "../../data/info-me-es.json";
+import WorkExperience from '../../components/sections/WorkExperience.astro'
+import Languaje from '../../components/sections/Lenguaje.astro'
+import Education from '../../components/sections/Education.astro'
+import Skills from '../../components/sections/Skills'
+import Contact from '../../components/sections/Contact.astro'
+import Meta from '../../components/sections/MetaDato.astro'
+import Separtor from "../../components/Separtor.astro";
+//import infoSpanish from '../../data/info-me-es.json'
+//import infoEnglis from '../../data/info-me-en.json'
+
+
+
+const { locale } = Astro.params;
+
+//const informacion: DataJSON = locale =="es" ? infoSpanish : infoEnglis //await import(`../../data/info-me-${locale}.json`).then(mod => mod.default);
+const informacion: DataJSON = await import(`../../data/info-me-${locale}.json`).then(mod => mod.default);
+const { descripcionPerfil, experienciasLaborales, idiomas, educacion, habilidades, contacto } = informacion;
+const {ciudadPais,redesSociales}= contacto
+
+export async function getStaticPaths() {
+  return [
+    { params: { locale: 'en' } },
+    { params: { locale: 'es' } },
+  ];
+}
+
+
+---
+
+<Layout>
+<Meta/>
+<Separtor/>
+
+  <Header informacion={descripcionPerfil} />
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    {/* Main Content */}
+    <div class="lg:col-span-2 space-y-8">
+		<WorkExperience experienciaLaboral={experienciasLaborales}/>
+
+    <Education education={educacion}/>
+    <Skills skills={habilidades} languaje={locale as 'es'|'en'} client:load/>
+
+	</div>
+  <div class="space-y-8">
+    {/* Slider Content */}
+    <Languaje languaje={idiomas}/>
+    <Contact place={ciudadPais} socialNetWork={redesSociales}/>
+
+  </div>
+  </div>
+</Layout>

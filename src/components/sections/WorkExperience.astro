@@ -3,15 +3,22 @@ import Title from "../Title.astro";
 import { Badge, Card, CardContent } from "../cards";
 import type { ExperienciaLaboral } from "../../data/info.type";
 import {obtenerMesAbreviado} from '../../utils/getMothString'
+import { getLangFromUrl, useTranslations } from "../../utils/languaje.utils";
+const { locale } = Astro.params;
+
+type LanguageType = 'es' | 'en'
+
 export interface Props {
   experienciaLaboral: ExperienciaLaboral;
 }
 
 const { experienciaLaboral } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section>
-  <Title title="Experiencia laboral" />
+  <Title title={t('work-title')} />
   <div class="space-y-6">
     {
       experienciaLaboral.map(
@@ -32,7 +39,7 @@ const { experienciaLaboral } = Astro.props;
                     <p class="text-blue-600 font-medium">{empresa}</p>
                   </div>
                   <span class="text-sm text-gray-500 mt-1 md:mt-0">
-                    {obtenerMesAbreviado(fechaDesde)} - {obtenerMesAbreviado(fechaHasta)}
+                    {obtenerMesAbreviado(fechaDesde,locale as LanguageType)} - {obtenerMesAbreviado(fechaHasta, locale as LanguageType)}
                   </span>
                 </div>
                 <p class="text-gray-700 mb-3">{descripcionPuesto}</p>

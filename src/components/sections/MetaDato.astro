@@ -1,0 +1,17 @@
+---
+import Badge from '../cards/Badge.astro'
+import Button  from '../Button.astro';
+import {Globe} from '@lucide/astro'
+
+const { locale } = Astro.params;
+---
+
+<span class="block px-4 font-bold">
+    <a href={locale != 'es' ? "/es/" : "/en/"} class="flex flex-row gap-0.5">
+        <Button variant="white" is:client>
+                <Globe/>
+                {locale?.toUpperCase()}
+        </Button>
+    </a>
+
+</span>

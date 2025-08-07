@@ -7,10 +7,12 @@ import {Badge} from '../react-components/badge'
 
 interface Props {
   skills: Skills;
+  languaje?: 'es'| 'en';
 }
 
-export default function SkillFilter({ skills }: Props) {
-  const [selected, setSelected] = useState("Todo");
+export default function SkillFilter({ skills, languaje='es' }: Props) {
+  const All = languaje=='es' ? "Todo" : "All" 
+  const [selected, setSelected] = useState(All);
 
   // Agrupar por área (una skill puede estar en varias)
   const grouped: Record<string, string[]> = {};
@@ -22,10 +24,11 @@ export default function SkillFilter({ skills }: Props) {
   }
 
   const areas = Object.keys(grouped);
+  
 
   // Filtrar según el área seleccionada
   const filteredSkills =
-    selected === "Todo"
+    selected === All
       ? skills
       : skills.filter((skill) => skill.areas.includes(selected));
 
@@ -33,18 +36,18 @@ export default function SkillFilter({ skills }: Props) {
     <section className="my-9">
       <div className="space-y-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
-        Habilidades Técnicas
+          {languaje == 'es' ? "Habilidades Técnicas" : 'Skills'}
       </h2>
         <Card>
           <CardContent className="p-6">
             <div className="mb-4">
               <div className="flex flex-wrap gap-2">
                 <Button
-                  variant={selected === "Todo" ? "default" : "outline"}
+                  variant={selected === All ? "default" : "outline"}
                   size="sm"
-                  onClick={() => setSelected("Todo")}
+                  onClick={() => setSelected(All)}
                 >
-                  Todo
+                  {All}
                 </Button>
                 {areas.map((area) => (
                   <Button
