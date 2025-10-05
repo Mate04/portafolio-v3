@@ -1,64 +1,79 @@
 ---
 import "../../../styles/global.css";
-import type { DataJSON } from '../../../data/info.type';
-import Layout from '../../../layouts/Layout.astro';
+import type { DataJSON } from "../../../data/info.type";
+import Layout from "../../../layouts/Layout.astro";
 
 // Enumeramos los locales válidos para generar las rutas estáticas.
 export function getStaticPaths() {
-	return [
-		{ params: { locale: 'es' } },
-		{ params: { locale: 'en' } },
-	];
+  return [{ params: { locale: "es" } }, { params: { locale: "en" } }];
 }
-import WorkExperience from '../../../components/cv/profesional-experience.astro'
-import Skills from '../../../components/cv/skills-cv.astro'
-
+import WorkExperience from "../../../components/cv/profesional-experience.astro";
+import Skills from "../../../components/cv/skills-cv.astro";
 
 const { locale } = Astro.params;
 
-const informacion: DataJSON = await import(`../../../data/info-me-${locale}.json`).then(mod => mod.default);
+const informacion: DataJSON = await import(
+  `../../../data/info-me-${locale}.json`
+).then((mod) => mod.default);
 
-const { nombre, descripcionPerfilExtensa, experienciasLaborales, habilidades, habilidadesBlandas } = informacion;
+const {
+  nombre,
+  descripcionPerfilExtensa,
+  experienciasLaborales,
+  habilidades,
+  habilidadesBlandas,
+  contacto,
+} = informacion;
+
+const { ciudadPais, redesSociales } = contacto;
+//Filtrame las siguientes redes sociales para que solo me muestre mail y linkedin
+const redesFiltradas = redesSociales.filter(red => red.nombre === 'Mail' || red.nombre === 'Linkedin');
 ---
+
 <Layout>
-    <div class="cv-container">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">{nombre}</h1>
-        {descripcionPerfilExtensa && (
-                <p class="cv-description">{descripcionPerfilExtensa}</p>
-        )}
+  <div class="cv-container">
+    <div class="mb-4">
+      <h1 class="text-4xl font-bold">{nombre}</h1>
+        
+      {/*<hr class="mt-2 border-t border-gray-300 dark:border-gray-600" />*/}
     </div>
-    <div class="cv-container mt-8">
-        <WorkExperience experienciaLaboral={experienciasLaborales} />
-    </div>
-    <div class="cv-container mt-8">
-        <Skills hardSkills={habilidades} softSkills={habilidadesBlandas} />
-    </div>
+    <p class="cv-description">{descripcionPerfilExtensa}</p>
+  </div>
+  <div class="cv-container mt-8">
+    <WorkExperience experienciaLaboral={experienciasLaborales} />
+  </div>
+  <div class="cv-container mt-8">
+    <Skills hardSkills={habilidades} softSkills={habilidadesBlandas} />
+  </div>
 </Layout>
 
 <script>
-    if (typeof window !== 'undefined') {
-        const params = new URLSearchParams(window.location.search);
-        if (params.get('print') === '1') {
-            // Si viene de iframe (embedded=1) imprimimos automáticamente sin pedir foco
-            const isEmbedded = params.get('embedded') === '1';
-            // Esperar a que cargue estilos y fuentes
-            window.addEventListener('load', () => {
-                setTimeout(() => {
-                    window.print();
-                    // Cerrar automáticamente si es popup (no iframe) y se abrió solo para imprimir
-                    if (!isEmbedded && window.matchMedia('(display-mode: browser)').matches) {
-                        // Pequeño delay para permitir al diálogo abrirse primero en algunos navegadores
-                        setTimeout(() => window.close(), 1500);
-                    }
-                }, 50);
-            });
-        }
+  if (typeof window !== "undefined") {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("print") === "1") {
+      // Si viene de iframe (embedded=1) imprimimos automáticamente sin pedir foco
+      const isEmbedded = params.get("embedded") === "1";
+      // Esperar a que cargue estilos y fuentes
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          window.print();
+          // Cerrar automáticamente si es popup (no iframe) y se abrió solo para imprimir
+          if (
+            !isEmbedded &&
+            window.matchMedia("(display-mode: browser)").matches
+          ) {
+            // Pequeño delay para permitir al diálogo abrirse primero en algunos navegadores
+            setTimeout(() => window.close(), 1500);
+          }
+        }, 50);
+      });
     }
+  }
 </script>
 
 <style>
-    body{
-        font-family: 'Proxima Nova', sans-serif;
-        line-height: 1.6;
-    }
+  body {
+    font-family: "Proxima Nova", sans-serif;
+    line-height: 1.6;
+  }
 </style>
