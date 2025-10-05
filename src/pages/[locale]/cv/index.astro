@@ -35,6 +35,27 @@ const { nombre, descripcionPerfilExtensa, experienciasLaborales, habilidades, ha
     </div>
 </Layout>
 
+<script>
+    if (typeof window !== 'undefined') {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('print') === '1') {
+            // Si viene de iframe (embedded=1) imprimimos automáticamente sin pedir foco
+            const isEmbedded = params.get('embedded') === '1';
+            // Esperar a que cargue estilos y fuentes
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    window.print();
+                    // Cerrar automáticamente si es popup (no iframe) y se abrió solo para imprimir
+                    if (!isEmbedded && window.matchMedia('(display-mode: browser)').matches) {
+                        // Pequeño delay para permitir al diálogo abrirse primero en algunos navegadores
+                        setTimeout(() => window.close(), 1500);
+                    }
+                }, 50);
+            });
+        }
+    }
+</script>
+
 <style>
     body{
         font-family: 'Proxima Nova', sans-serif;
