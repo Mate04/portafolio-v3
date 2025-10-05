@@ -9,6 +9,7 @@ export function getStaticPaths() {
 		{ params: { locale: 'en' } },
 	];
 }
+import WorkExperience from '../../../components/cv/profesional-experience.astro'
 
 const { locale } = Astro.params;
 
@@ -22,6 +23,9 @@ const { nombre, descripcionPerfilExtensa, experienciasLaborales } = informacion;
         {descripcionPerfilExtensa && (
                 <p class="cv-description">{descripcionPerfilExtensa}</p>
         )}
+    </div>
+    <div class="cv-container mt-8">
+        <WorkExperience experienciaLaboral={experienciasLaborales} />
     </div>
 </Layout>
 

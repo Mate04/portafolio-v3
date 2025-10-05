@@ -19,6 +19,7 @@ export type ExperienciaLaboral = Array<{
   fechaDesde: string;
   fechaHasta: string;
   descripcionPuesto: string;
+  descripcionPuestoExtensa: string;
   habilidades: Array<string>;
 }>;
 
