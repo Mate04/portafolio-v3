@@ -1,25 +1,15 @@
 {
+  "nombre": "Mateo Maldonado",
   "descripcionPerfil": "Ingeniero en Sistemas con más de 5 años de experiencia en la industria, actualmente cursando la carrera universitaria. Especializado en desarrollo de soluciones tecnológicas innovadoras, con un fuerte enfoque en aprendizaje continuo y crecimiento profesional.",
+  "descripcionPerfilExtensa": "Ingeniero en Sistemas con más de 5 años de experiencia en la industria tecnológica, actualmente cursando la carrera universitaria en la Universidad Tecnológica Nacional. Apasionado por el diseño, desarrollo e implementación de soluciones tecnológicas innovadoras que generen impacto real en las organizaciones. A lo largo de mi trayectoria, he trabajado en proyectos de diversa complejidad —desde el desarrollo de sistemas backend escalables y seguros, hasta la creación de interfaces web centradas en la experiencia del usuario— aplicando metodologías ágiles y buenas prácticas de ingeniería de software. Me destaco por mi capacidad para integrar la visión técnica con la gestión de proyectos, liderando procesos de desarrollo orientados a la calidad, la mejora continua y la colaboración interdisciplinaria. Mi objetivo profesional es seguir creciendo como ingeniero y contribuir al desarrollo de productos digitales que optimicen procesos y potencien el valor del negocio.",
   "puesto": "Ingeniero de Sistemas de Información",
   "contacto": {
     "ciudadPais": "Córdoba, Argentina",
     "redesSociales": [
-      {
-        "nombre": "Mail",
-        "link": "mateoemaldonado@gmail.com"
-      },
-      {
-        "nombre": "Linkedin",
-        "link": "https://www.linkedin.com/in/mateo-maldonado-74b9b4171/"
-      },
-      {
-        "nombre": "GitHub",
-        "link": "https://github.com/Mate04"
-      },
-      {
-        "nombre": "Discord",
-        "link": "todavia no esta jaja"
-      }
+      { "nombre": "Mail", "link": "mateoemaldonado@gmail.com" },
+      { "nombre": "Linkedin", "link": "https://www.linkedin.com/in/mateo-maldonado-74b9b4171/" },
+      { "nombre": "GitHub", "link": "https://github.com/Mate04" },
+      { "nombre": "Discord", "link": "todavia no esta jaja" }
     ]
   },
   "experienciasLaborales": [
@@ -29,6 +19,7 @@
       "fechaDesde": "11, 24",
       "fechaHasta": "actualidad",
       "descripcionPuesto": "Desarrollador de sistema de juego responsable para la regularización de usuarios de la provincia de Córdoba.",
+      "descripcionPuestoExtensa": "Responsable del diseño, desarrollo y mantenimiento del sistema de juego online de la Lotería de Córdoba, orientado a garantizar el cumplimiento normativo y la seguridad de los usuarios dentro del marco del juego responsable. Implementé servicios backend escalables basados en arquitectura de microservicios utilizando NestJS y TypeScript, con integración a bases de datos Oracle. Colaboré estrechamente con equipos de QA, infraestructura y producto para optimizar flujos de autenticación, gestión de usuarios y procesamiento de transacciones en tiempo real. Además, participé en la automatización de despliegues mediante Docker y GitHub Actions, asegurando la trazabilidad del código y la calidad del producto final.",
       "habilidades": [
         "HTML",
         "Desarrollador de API",
@@ -47,6 +38,7 @@
       "fechaDesde": "01, 24",
       "fechaHasta": "03, 24",
       "descripcionPuesto": "Responsable del diseño y desarrollo del sitio web de OctiGames.",
+      "descripcionPuestoExtensa": "Encargado del desarrollo integral del sitio web corporativo de OctiGames, desde el diseño de la interfaz hasta la implementación del front-end y back-end. Utilicé tecnologías modernas como Next.js, React y JavaScript para crear una experiencia de usuario fluida, atractiva y optimizada para SEO. Colaboré con el equipo de diseño para traducir prototipos en componentes reutilizables y accesibles, garantizando la coherencia visual y funcional del producto. Implementé prácticas ágiles de desarrollo y control de versiones con GitHub, priorizando la calidad del código, la escalabilidad y la mantenibilidad del proyecto.",
       "habilidades": [
         "JavaScript",
         "Experiencia de usuario",
@@ -76,38 +68,32 @@
     }
   ],
   "habilidades": [
-    { "nombre": "UI/UX",               "areas": ["Frontend"] },
-    { "nombre": "Experiencia de usuario","areas": ["Frontend"] },
-    { "nombre": "Diseño de sistemas",  "areas": ["Product manager"] },
-    { "nombre": "Base de datos relacional","areas": ["Base de datos"] },
-    { "nombre": "Gestión de proyectos","areas": ["Product manager"] },
-    { "nombre": "JavaScript",          "areas": ["Frontend","Backend"] },
-    { "nombre": "Python",              "areas": ["Backend"] },
-    { "nombre": "Node",             "areas": ["Backend"] },
-    { "nombre": "PowerShell",          "areas": ["Backend"] },
-    { "nombre": "Java",                "areas": ["Backend"] },
-    { "nombre": "MySQL",               "areas": ["Base de datos"] },
-    { "nombre": "HTML",                "areas": ["Frontend"] },
-    { "nombre": "TypeScript",          "areas": ["Frontend","Backend"] },
-    { "nombre": ".NET Framework",      "areas": ["Backend"] },
-    { "nombre": "Next",             "areas": ["Frontend"] },
-    { "nombre": "React",            "areas": ["Frontend"] },
-    { "nombre": "FastAPI",             "areas": ["Backend"] },
-    { "nombre": "Docker",              "areas": ["DevOps","Backend"] },
+    { "nombre": "UI/UX", "areas": ["Frontend"] },
+    { "nombre": "Experiencia de usuario", "areas": ["Frontend"] },
+    { "nombre": "Diseño de sistemas", "areas": ["Product manager"] },
+    { "nombre": "Base de datos relacional", "areas": ["Base de datos"] },
+    { "nombre": "Gestión de proyectos", "areas": ["Product manager"] },
+    { "nombre": "JavaScript", "areas": ["Frontend", "Backend"] },
+    { "nombre": "Python", "areas": ["Backend"] },
+    { "nombre": "Node", "areas": ["Backend"] },
+    { "nombre": "PowerShell", "areas": ["Backend"] },
+    { "nombre": "Java", "areas": ["Backend"] },
+    { "nombre": "MySQL", "areas": ["Base de datos"] },
+    { "nombre": "HTML", "areas": ["Frontend"] },
+    { "nombre": "TypeScript", "areas": ["Frontend", "Backend"] },
+    { "nombre": ".NET Framework", "areas": ["Backend"] },
+    { "nombre": "Next", "areas": ["Frontend"] },
+    { "nombre": "React", "areas": ["Frontend"] },
+    { "nombre": "FastAPI", "areas": ["Backend"] },
+    { "nombre": "Docker", "areas": ["DevOps", "Backend"] },
     { "nombre": "Metodologías ágiles", "areas": ["Product manager"] },
-    { "nombre": "Microservicios",      "areas": ["Backend"] },
-    { "nombre": "Metodologías de desarrollo de software","areas": ["Product manager"] },
-    { "nombre": "Estructuras de datos","areas": ["Backend"] },
-    { "nombre": "Scrum",               "areas": ["Product manager"] }
+    { "nombre": "Microservicios", "areas": ["Backend"] },
+    { "nombre": "Metodologías de desarrollo de software", "areas": ["Product manager"] },
+    { "nombre": "Estructuras de datos", "areas": ["Backend"] },
+    { "nombre": "Scrum", "areas": ["Product manager"] }
   ],
   "idiomas": [
-    {
-      "idioma": "Español",
-      "nivel": "Nativo"
-    },
-    {
-      "idioma": "Inglés",
-      "nivel": "C1"
-    }
+    { "idioma": "Español", "nivel": "Nativo" },
+    { "idioma": "Inglés", "nivel": "C1" }
   ]
 }

@@ -1,0 +1,33 @@
+---
+import "../../../styles/global.css";
+import type { DataJSON } from '../../../data/info.type';
+import Layout from '../../../layouts/Layout.astro';
+// Enumeramos los locales válidos para generar las rutas estáticas.
+export function getStaticPaths() {
+	return [
+		{ params: { locale: 'es' } },
+		{ params: { locale: 'en' } },
+	];
+}
+
+const { locale } = Astro.params;
+
+const informacion: DataJSON = await import(`../../../data/info-me-${locale}.json`).then(mod => mod.default);
+
+const { nombre, descripcionPerfilExtensa, experienciasLaborales } = informacion;
+---
+<Layout>
+    <div class="cv-container">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6">{nombre}</h1>
+        {descripcionPerfilExtensa && (
+                <p class="cv-description">{descripcionPerfilExtensa}</p>
+        )}
+    </div>
+</Layout>
+
+<style>
+    body{
+        font-family: 'Proxima Nova', sans-serif;
+        line-height: 1.6;
+    }
+</style>

@@ -1,5 +1,7 @@
 export type DataJSON = {
+  nombre: string;
   descripcionPerfil: string;
+  descripcionPerfilExtensa: string;
   puesto: string;
   contacto: {
     ciudadPais: string;
