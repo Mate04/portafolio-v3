@@ -2,6 +2,7 @@
 import "../../../styles/global.css";
 import type { DataJSON } from '../../../data/info.type';
 import Layout from '../../../layouts/Layout.astro';
+
 // Enumeramos los locales válidos para generar las rutas estáticas.
 export function getStaticPaths() {
 	return [
@@ -10,12 +11,14 @@ export function getStaticPaths() {
 	];
 }
 import WorkExperience from '../../../components/cv/profesional-experience.astro'
+import Skills from '../../../components/cv/skills-cv.astro'
+
 
 const { locale } = Astro.params;
 
 const informacion: DataJSON = await import(`../../../data/info-me-${locale}.json`).then(mod => mod.default);
 
-const { nombre, descripcionPerfilExtensa, experienciasLaborales } = informacion;
+const { nombre, descripcionPerfilExtensa, experienciasLaborales, habilidades, habilidadesBlandas } = informacion;
 ---
 <Layout>
     <div class="cv-container">
@@ -26,6 +29,9 @@ const { nombre, descripcionPerfilExtensa, experienciasLaborales } = informacion;
     </div>
     <div class="cv-container mt-8">
         <WorkExperience experienciaLaboral={experienciasLaborales} />
+    </div>
+    <div class="cv-container mt-8">
+        <Skills hardSkills={habilidades} softSkills={habilidadesBlandas} />
     </div>
 </Layout>
 

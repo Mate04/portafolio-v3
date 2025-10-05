@@ -85,18 +85,24 @@
     { "nombre": "FastAPI", "areas": ["Backend"] },
     { "nombre": "Docker", "areas": ["DevOps", "Backend"] },
     { "nombre": "Metodologías ágiles", "areas": ["Product manager"] },
-    { "nombre": "Microservicios",      "areas": ["Backend"] },
-    { "nombre": "Metodologías de desarrollo de software","areas": ["Product manager"] },
-    { "nombre": "Estructuras de datos","areas": ["Backend"] },
-    { "nombre": "Scrum",               "areas": ["Product manager"] },
-    { "nombre": "Git",                 "areas": ["DevOps","Backend","Frontend"] },
-    { "nombre": "PostgreSQL",          "areas": ["Base de datos"] },
-    { "nombre": "Nest",                "areas": ["Backend"] },
-    { "nombre": "API REST",            "areas": ["Backend"] },
-    { "nombre": "Desarrollo de API",   "areas": ["Backend"] }
+    { "nombre": "Microservicios", "areas": ["Backend"] },
+    { "nombre": "Metodologías de desarrollo de software", "areas": ["Product manager"] },
+    { "nombre": "Estructuras de datos", "areas": ["Backend"] },
+    { "nombre": "Scrum", "areas": ["Product manager"] },
+    { "nombre": "Git", "areas": ["DevOps", "Backend", "Frontend"] },
+    { "nombre": "PostgreSQL", "areas": ["Base de datos"] },
+    { "nombre": "Nest", "areas": ["Backend"] },
+    { "nombre": "API REST", "areas": ["Backend"] },
+    { "nombre": "Desarrollo de API", "areas": ["Backend"] }
   ],
   "idiomas": [
     { "idioma": "Español", "nivel": "Nativo" },
     { "idioma": "Inglés", "nivel": "C1" }
+  ],
+  "habilidadesBlandas": [
+    "Capacidad para trabajar eficazmente en equipos diversos.",
+    "Pensamiento analítico para identificar y resolver problemas de manera eficiente.",
+    "Apertura a la retroalimentación y disposición para mejorar.",
+    "Habilidad para equilibrar múltiples proyectos y responsabilidades."
   ]
 }

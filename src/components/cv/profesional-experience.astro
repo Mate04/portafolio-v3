@@ -1,19 +1,17 @@
 ---
 import type { ExperienciaLaboral } from "../../data/info.type";
 import { getLangFromUrl, useTranslations } from "../../utils/languaje.utils";
-
-const { locale } = Astro.params;
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+import Section from './section-cv.astro';
 
 interface Props {
   experienciaLaboral: ExperienciaLaboral;
 }
+
 const { experienciaLaboral } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 // Util para formatear las fechas tipo "MM, YY" -> "Mes YYYY"
-// Si recibe ya un año (e.g. "2022") lo devuelve igual.
-// Si recibe "actualidad" u otra palabra, la capitaliza.
 function formatDate(raw: string) {
   const lower = raw.toLowerCase().trim();
   if (lower === "actualidad" || lower === "present") {
@@ -22,35 +20,9 @@ function formatDate(raw: string) {
   if (/^\d{2},\s?\d{2}$/.test(raw)) {
     const [mm, yy] = raw.split(",").map((s) => s.trim());
     const monthIndex = parseInt(mm, 10) - 1;
-    const year = parseInt(yy, 10) < 50 ? "20" + yy : "19" + yy; // Asume 2000+ para <50
-    const monthsEs = [
-      "Ene",
-      "Feb",
-      "Mar",
-      "Abr",
-      "May",
-      "Jun",
-      "Jul",
-      "Ago",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dic",
-    ];
-    const monthsEn = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
+    const year = parseInt(yy, 10) < 50 ? "20" + yy : "19" + yy;
+    const monthsEs = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+    const monthsEn = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const m = lang === "en" ? monthsEn[monthIndex] : monthsEs[monthIndex];
     return `${m} ${year}`;
   }
@@ -65,52 +37,49 @@ function splitParagraphs(text: string) {
 }
 ---
 
-<section>
-  <h2 class="text-2xl font-bold mb-6 text-gray-900">{t("work-title")}</h2>
-  <div class="space-y-10">
-    {
-      experienciaLaboral.map(
-        ({
-          cargo,
-          empresa,
-          fechaDesde,
-          fechaHasta,
-          descripcionPuestoExtensa /*, habilidades */,
-        }) => {
-          const paragraphs = splitParagraphs(descripcionPuestoExtensa);
-          return (
-            <article class="group">
-              <header class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <h3 class="font-bold tracking-wide text-sm text-gray-900 uppercase mb-2">
-                    {empresa}
-                  </h3>
-                  <p class="text-gray-800 font-bold text-base leading-tight">
-                    {cargo}
-                  </p>
-                </div>
-                <div class="text-sm text-gray-600 font-medium mt-1 sm:mt-0 whitespace-nowrap">
-                  {formatDate(fechaDesde)} - {formatDate(fechaHasta)}
-                </div>
-              </header>
-              <div class="mt-3 space-y-4 leading-relaxed">
-                {paragraphs.map((p) => (
-                  <p>{p}</p>
-                ))}
+<Section title={t('work-title')}>
+  {
+    experienciaLaboral.map(
+      ({
+        cargo,
+        empresa,
+        fechaDesde,
+        fechaHasta,
+        descripcionPuestoExtensa /*, habilidades */,
+      }) => {
+        const paragraphs = splitParagraphs(descripcionPuestoExtensa);
+        return (
+          <article class="group">
+            <header class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <h3 class="font-bold tracking-wide uppercase mb-2">
+                  {empresa}
+                </h3>
+                <p class=" font-bold text-base leading-tight">
+                  {cargo}
+                </p>
               </div>
-              {/* Habilidades: Descomentar si se desean mostrar chips */}
-              {/* <ul class="mt-4 flex flex-wrap gap-2 print:hidden">
-            {habilidades.map(h => (
-              <li class="text-xs px-2 py-1 border border-gray-300 rounded-full text-gray-600 font-medium">{h}</li>
-            ))}
-          </ul> */}
-            </article>
-          );
-        }
-      )
-    }
-  </div>
-</section>
+              <div class="text-sm text-gray-600 font-medium mt-1 sm:mt-0 whitespace-nowrap">
+                {formatDate(fechaDesde)} - {formatDate(fechaHasta)}
+              </div>
+            </header>
+            <div class="mt-3 space-y-4 leading-relaxed">
+              {paragraphs.map((p) => (
+                <p>{p}</p>
+              ))}
+            </div>
+            {/* Habilidades: Descomentar si se desean mostrar chips */}
+            {/* <ul class="mt-4 flex flex-wrap gap-2 print:hidden">
+              {habilidades.map(h => (
+                <li class="text-xs px-2 py-1 border border-gray-300 rounded-full text-gray-600 font-medium">{h}</li>
+              ))}
+            </ul> */}
+          </article>
+        );
+      }
+    )
+  }
+</Section>
 
 <style>
   body {

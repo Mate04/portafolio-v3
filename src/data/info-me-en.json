@@ -1,7 +1,7 @@
 {
   "nombre": "Mateo Maldonado",
-  "descripcionPerfil": "Systems Engineer with over 5 years of experience in the industry, currently pursuing a university degree. Specialized in developing innovative technology solutions with a strong focus on continuous learning and professional growth.",
-  "descripcionPerfilExtensa": "Systems Engineer with over 5 years of experience in the tech industry, currently studying at the National Technological University. Passionate about designing, developing, and implementing innovative technology solutions that create real impact within organizations. Throughout my career, I have worked on diverse projects—from scalable and secure backend systems to user-centered web interfaces—applying agile methodologies and best software engineering practices. I stand out for my ability to integrate technical vision with project management, leading development processes focused on quality, continuous improvement, and interdisciplinary collaboration. My professional goal is to continue growing as an engineer and contribute to the development of digital products that optimize processes and enhance business value.",
+  "descripcionPerfil": "Systems Engineer with over 5 years of industry experience, currently pursuing a university degree. Specialized in developing innovative technological solutions, with a strong focus on continuous learning and professional growth.",
+  "descripcionPerfilExtensa": "Systems Engineer with over 5 years of experience in the tech industry, currently pursuing a university degree at the National Technological University. Passionate about the design, development, and implementation of innovative technological solutions that generate real impact in organizations. Throughout my career, I have worked on projects of varying complexity — from the development of scalable and secure backend systems to the creation of user-centered web interfaces — applying agile methodologies and software engineering best practices. I stand out for my ability to integrate technical vision with project management, leading development processes focused on quality, continuous improvement, and interdisciplinary collaboration. My professional goal is to continue growing as an engineer and contribute to the development of digital products that optimize processes and enhance business value.",
   "puesto": "Information Systems Engineer",
   "contacto": {
     "ciudadPais": "Córdoba, Argentina",
@@ -9,22 +9,22 @@
       { "nombre": "Mail", "link": "mateoemaldonado@gmail.com" },
       { "nombre": "Linkedin", "link": "https://www.linkedin.com/in/mateo-maldonado-74b9b4171/" },
       { "nombre": "GitHub", "link": "https://github.com/Mate04" },
-      { "nombre": "Discord", "link": "not yet lol" }
+      { "nombre": "Discord", "link": "not available yet haha" }
     ]
   },
   "experienciasLaborales": [
     {
       "empresa": "Lotería de Córdoba",
-      "cargo": "Backend Developer - Online Gaming",
+      "cargo": "Backend Developer – Online Gaming",
       "fechaDesde": "11, 24",
-      "fechaHasta": "actualidad",
-      "descripcionPuesto": "Developer of a responsible gaming system for user regulation in the province of Córdoba.",
-      "descripcionPuestoExtensa": "Responsible for the design, development, and maintenance of the online gaming system for Lotería de Córdoba, aimed at ensuring regulatory compliance and user safety within the framework of responsible gaming. I implemented scalable backend services based on microservices architecture using NestJS and TypeScript, integrated with Oracle databases. I closely collaborated with QA, infrastructure, and product teams to optimize authentication flows, user management, and real-time transaction processing. Additionally, I participated in deployment automation using Docker and GitHub Actions, ensuring code traceability and product quality.",
+      "fechaHasta": "present",
+      "descripcionPuesto": "Developer of the responsible gaming system for user regulation in the province of Córdoba.",
+      "descripcionPuestoExtensa": "In charge of the design, development, and maintenance of the online gaming system of Lotería de Córdoba, focused on ensuring regulatory compliance and user safety within the framework of responsible gaming. I implemented scalable backend services based on microservices architecture using NestJS and TypeScript, integrated with Oracle databases. Closely collaborated with QA, infrastructure, and product teams to optimize authentication flows, user management, and real-time transaction processing. Additionally, I contributed to deployment automation through Docker and GitHub Actions, ensuring code traceability and final product quality.",
       "habilidades": [
-        "API development",
+        "API Developer",
         "Nest",
         "GitHub",
-        "Project management",
+        "Project Management",
         "Node.js",
         "TypeScript",
         "PostgreSQL"
@@ -35,8 +35,8 @@
       "cargo": "Web Developer",
       "fechaDesde": "01, 24",
       "fechaHasta": "03, 24",
-      "descripcionPuesto": "Responsible for the design and development of the OctiGames website.",
-      "descripcionPuestoExtensa": "In charge of the full development of the OctiGames corporate website, from interface design to front-end and back-end implementation. I used modern technologies like Next.js, React, and JavaScript to create a smooth, attractive, and SEO-optimized user experience. I collaborated with the design team to translate prototypes into reusable and accessible components, ensuring visual and functional consistency. I applied agile development practices and version control with GitHub, prioritizing code quality, scalability, and maintainability.",
+      "descripcionPuesto": "Responsible for the design and development of OctiGames' website.",
+      "descripcionPuestoExtensa": "Led the full development of OctiGames' corporate website, from interface design to front-end and back-end implementation. Utilized modern technologies like Next.js, React, and JavaScript to create a smooth, appealing, and SEO-optimized user experience. Worked with the design team to translate prototypes into reusable and accessible components, ensuring visual and functional consistency. Applied agile development practices and version control using GitHub, prioritizing code quality, scalability, and project maintainability.",
       "habilidades": [
         "JavaScript",
         "User Experience",
@@ -55,10 +55,10 @@
       "fechaDesde": "2022",
       "fechaHasta": "2027",
       "certificadoPDF": "",
-      "descripcion": "Currently studying. Specialization in software development and systems architecture."
+      "descripcion": "Currently enrolled. Specialization in software development and system architecture."
     },
     {
-      "titulo": "High School Diploma",
+      "titulo": "High School Diploma (ESO Equivalent)",
       "institucion": "Centro Educacional San Jorge",
       "fechaDesde": "2008",
       "fechaHasta": "2021",
@@ -66,43 +66,43 @@
     }
   ],
   "habilidades": [
-    { "nombre": "UI/UX",               "areas": ["Frontend"] },
-    { "nombre": "User experience",     "areas": ["Frontend"] },
-    { "nombre": "System design",       "areas": ["Product manager"] },
-    { "nombre": "Relational databases","areas": ["Database"] },
-    { "nombre": "Project management",  "areas": ["Product manager"] },
-    { "nombre": "JavaScript",          "areas": ["Frontend","Backend"] },
-    { "nombre": "Python",              "areas": ["Backend"] },
-    { "nombre": "Node.js",             "areas": ["Backend"] },
-    { "nombre": "PowerShell",          "areas": ["Backend"] },
-    { "nombre": "Java",                "areas": ["Backend"] },
-    { "nombre": "MySQL",               "areas": ["Database"] },
-    { "nombre": "HTML",                "areas": ["Frontend"] },
-    { "nombre": "TypeScript",          "areas": ["Frontend","Backend"] },
-    { "nombre": ".NET Framework",      "areas": ["Backend"] },
-    { "nombre": "Web technologies",    "areas": ["Frontend"] },
-    { "nombre": "Computer systems",    "areas": ["Backend"] },
-    { "nombre": "Programming",         "areas": ["Backend"] },
-    { "nombre": "Next.js",             "areas": ["Frontend"] },
-    { "nombre": "React.js",            "areas": ["Frontend"] },
-    { "nombre": "FastAPI",             "areas": ["Backend"] },
-    { "nombre": "Docker",              "areas": ["DevOps","Backend"] },
-    { "nombre": "JSON",                "areas": ["Backend"] },
-    { "nombre": "Agile methodologies", "areas": ["Product manager"] },
-    { "nombre": "Attention to detail", "areas": ["Product manager"] },
-    { "nombre": "Microservices",       "areas": ["Backend"] },
-    { "nombre": "Software development methodologies", "areas": ["Product manager"] },
-    { "nombre": "Data structures",     "areas": ["Backend"] },
-    { "nombre": "Algorithms",          "areas": ["Backend"] },
-    { "nombre": "Scrum",               "areas": ["Product manager"] },
-    { "nombre": "Git",                 "areas": ["DevOps","Backend","Frontend"] },
-    { "nombre": "PostgreSQL",          "areas": ["Database"] },
-    { "nombre": "Nest",             "areas": ["Backend"] },
-    { "nombre": "REST API",            "areas": ["Backend"] },
-    { "nombre": "API development",     "areas": ["Backend"] }
+    { "nombre": "UI/UX", "areas": ["Frontend"] },
+    { "nombre": "User Experience", "areas": ["Frontend"] },
+    { "nombre": "System Design", "areas": ["Product manager"] },
+    { "nombre": "Relational Databases", "areas": ["Database"] },
+    { "nombre": "Project Management", "areas": ["Product manager"] },
+    { "nombre": "JavaScript", "areas": ["Frontend", "Backend"] },
+    { "nombre": "Python", "areas": ["Backend"] },
+    { "nombre": "Node", "areas": ["Backend"] },
+    { "nombre": "PowerShell", "areas": ["Backend"] },
+    { "nombre": "Java", "areas": ["Backend"] },
+    { "nombre": "MySQL", "areas": ["Database"] },
+    { "nombre": "HTML", "areas": ["Frontend"] },
+    { "nombre": "TypeScript", "areas": ["Frontend", "Backend"] },
+    { "nombre": ".NET Framework", "areas": ["Backend"] },
+    { "nombre": "Next", "areas": ["Frontend"] },
+    { "nombre": "React", "areas": ["Frontend"] },
+    { "nombre": "FastAPI", "areas": ["Backend"] },
+    { "nombre": "Docker", "areas": ["DevOps", "Backend"] },
+    { "nombre": "Agile Methodologies", "areas": ["Product manager"] },
+    { "nombre": "Microservices", "areas": ["Backend"] },
+    { "nombre": "Software Development Methodologies", "areas": ["Product manager"] },
+    { "nombre": "Data Structures", "areas": ["Backend"] },
+    { "nombre": "Scrum", "areas": ["Product manager"] },
+    { "nombre": "Git", "areas": ["DevOps", "Backend", "Frontend"] },
+    { "nombre": "PostgreSQL", "areas": ["Database"] },
+    { "nombre": "Nest", "areas": ["Backend"] },
+    { "nombre": "REST API", "areas": ["Backend"] },
+    { "nombre": "API Development", "areas": ["Backend"] }
   ],
   "idiomas": [
     { "idioma": "Spanish", "nivel": "Native" },
     { "idioma": "English", "nivel": "C1" }
+  ],
+  "habilidadesBlandas": [
+    "Ability to work effectively in diverse teams.",
+    "Analytical thinking to identify and resolve problems efficiently.",
+    "Openness to feedback and willingness to improve.",
+    "Ability to balance multiple projects and responsibilities."
   ]
 }

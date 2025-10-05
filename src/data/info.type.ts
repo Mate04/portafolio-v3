@@ -10,6 +10,7 @@ export type DataJSON = {
   experienciasLaborales: ExperienciaLaboral;
   educacion: Education;
   habilidades: Skills;
+  habilidadesBlandas: Array<string>;
   idiomas: Languaje;
 };
 
