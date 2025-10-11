@@ -1,12 +1,15 @@
 ---
 import type { SocialNetwork } from "../../data/info.type";
 import { Linkedin, Earth, Mail } from "@lucide/astro";
+import { getLangFromUrl } from "../../utils/languaje.utils";
 
 interface Props {
   contacto: SocialNetwork;
   place: string;
 }
 const { contacto, place } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
 
 const emailItem = contacto.find((c) => c.nombre === "Mail");
 
@@ -36,7 +39,6 @@ const linkedInItem = contacto.find((c) => c.nombre === "Linkedin");
             href={`mailto:${emailItem.link}`}
             class="inline-flex items-center gap-1 underline hover:no-underline whitespace-nowrap"
           >
-            <Mail class="w-4 h-4" />
             {emailItem.link}
           </a>
         </>
@@ -55,8 +57,7 @@ const linkedInItem = contacto.find((c) => c.nombre === "Linkedin");
             rel="noopener noreferrer"
             class="inline-flex items-center gap-1 underline hover:no-underline whitespace-nowrap"
           >
-            <Linkedin class="w-4 h-4" />
-            Linkedin Mateo Maldonado
+            LinkedIn Mateo Maldonado
           </a>
         </>
       )
@@ -65,12 +66,11 @@ const linkedInItem = contacto.find((c) => c.nombre === "Linkedin");
     <>
       <span class="text-gray-400" aria-hidden="true">|</span>
       <a
-        href="https://mateomaldonado.com/es"
+        href={`https://mateomaldonado.com/${lang}`}
         target="_blank"
         class="inline-flex items-center gap-1 underline hover:no-underline whitespace-nowrap"
       >
-        <Earth class="w-4 h-4" />
-        mateomaldonado.com/es
+        www.mateomaldonado.com
       </a>
     </>
   </div>
