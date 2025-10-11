@@ -1,7 +1,7 @@
 ---
 import type { ExperienciaLaboral } from "../../data/info.type";
 import { getLangFromUrl, useTranslations } from "../../utils/languaje.utils";
-import Section from './section-cv.astro';
+import Section from "./section-cv.astro";
 
 interface Props {
   experienciaLaboral: ExperienciaLaboral;
@@ -21,8 +21,34 @@ function formatDate(raw: string) {
     const [mm, yy] = raw.split(",").map((s) => s.trim());
     const monthIndex = parseInt(mm, 10) - 1;
     const year = parseInt(yy, 10) < 50 ? "20" + yy : "19" + yy;
-    const monthsEs = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
-    const monthsEn = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const monthsEs = [
+      "Ene",
+      "Feb",
+      "Mar",
+      "Abr",
+      "May",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dic",
+    ];
+    const monthsEn = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
     const m = lang === "en" ? monthsEn[monthIndex] : monthsEs[monthIndex];
     return `${m} ${year}`;
   }
@@ -37,7 +63,7 @@ function splitParagraphs(text: string) {
 }
 ---
 
-<Section title={t('work-title')}>
+<Section title={t("work-title")}>
   {
     experienciaLaboral.map(
       ({
@@ -55,9 +81,7 @@ function splitParagraphs(text: string) {
                 <h3 class="font-bold tracking-wide uppercase mb-2">
                   {empresa}
                 </h3>
-                <p class=" font-bold text-base leading-tight">
-                  {cargo}
-                </p>
+                <p class=" font-bold text-base leading-tight">{cargo}</p>
               </div>
               <div class="text-sm text-gray-600 font-medium mt-1 sm:mt-0 whitespace-nowrap">
                 {formatDate(fechaDesde)} - {formatDate(fechaHasta)}

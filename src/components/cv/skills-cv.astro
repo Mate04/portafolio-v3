@@ -1,7 +1,7 @@
 ---
 import type { Skills } from "../../data/info.type";
 import { getLangFromUrl, useTranslations } from "../../utils/languaje.utils";
-import Section from './section-cv.astro'
+import Section from "./section-cv.astro";
 
 interface Props {
   hardSkills: Skills;
@@ -27,29 +27,35 @@ if (skills && skills.length) {
 }
 ---
 
-<Section title={t('Skills')}>
-    <div>
-        <h2 class="uppercase font-semibold text-base tracking-wide mb-1">{t('hard-skills')}</h2>
-        {groupedSkills.length > 0 && (
-    <div class="space-y-1 leading-snug">
-      {groupedSkills.map(g => (
-        <p>
-          <span class="font-semibold">{g.area}:</span> {g.skills.join(', ')}
-        </p>
-      ))}
-    </div>
-  )}
-    </div>
-    <div>
-        <h2 class="uppercase font-semibold text-base tracking-wide mb-1">{t('soft-skills')}</h2>
-        {softSkills && softSkills.length > 0 && (
-          <div class="space-y-1 leading-snug">
-            {softSkills.map(skill => (
-              <p>{skill}</p>
-            ))}
-          </div>
-        )}
-    </div>
-  
-
+<Section title={t("Skills")}>
+  <div>
+    <h2 class="uppercase font-semibold text-base tracking-wide mb-1">
+      {t("hard-skills")}
+    </h2>
+    {
+      groupedSkills.length > 0 && (
+        <div class="space-y-1 leading-snug">
+          {groupedSkills.map((g) => (
+            <p>
+              <span class="font-semibold">{g.area}:</span> {g.skills.join(", ")}
+            </p>
+          ))}
+        </div>
+      )
+    }
+  </div>
+  <div>
+    <h2 class="uppercase font-semibold text-base tracking-wide mb-1">
+      {t("soft-skills")}
+    </h2>
+    {
+      softSkills && softSkills.length > 0 && (
+        <div class="space-y-1 leading-snug">
+          {softSkills.map((skill) => (
+            <p>{skill}</p>
+          ))}
+        </div>
+      )
+    }
+  </div>
 </Section>
