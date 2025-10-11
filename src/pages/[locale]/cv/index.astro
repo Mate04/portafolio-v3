@@ -11,6 +11,8 @@ import WorkExperience from "../../../components/cv/profesional-experience.astro"
 import Skills from "../../../components/cv/skills-cv.astro";
 import EducationExperience from '../../../components/cv/education-experience.astro'
 import Section from '../../../components/cv/section-cv.astro'
+import Contact from '../../../components/cv/contact-cv.astro'
+
 import { getLangFromUrl, useTranslations } from "../../../utils/languaje.utils";
 
 const { locale } = Astro.params;
@@ -38,6 +40,7 @@ const t = useTranslations(lang);
   <div class="cv-container">
     <div class="mb-4">
       <h1 class="text-4xl font-bold">{nombre}</h1>
+      <Contact contacto={contacto.redesSociales} place={contacto.ciudadPais} />
         
       {/*<hr class="mt-2 border-t border-gray-300 dark:border-gray-600" />*/}
     </div>

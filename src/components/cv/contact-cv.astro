@@ -1,0 +1,77 @@
+---
+import type { SocialNetwork } from "../../data/info.type";
+import { Linkedin, Earth, Mail } from "@lucide/astro";
+
+interface Props {
+  contacto: SocialNetwork;
+  place: string;
+}
+const { contacto, place } = Astro.props;
+
+const emailItem = contacto.find((c) => c.nombre === "Mail");
+
+const linkedInItem = contacto.find((c) => c.nombre === "Linkedin");
+---
+
+<!--
+  Contact row styled like: "Córdoba, Argentina | +54 9 3513244486 | email@example.com"
+  - Shows place first
+  - Then optional phone if a phone-looking value or tel: link exists in contacto
+  - Then email (Mail) as mailto link
+  - Gracefully ignores other social links in this compact CV header line
+-->
+<div class="text-gray-600 mt-1.5">
+  <div
+    class="flex flex-nowrap items-center gap-2 text-sm sm:text-base leading-relaxed whitespace-nowrap"
+  >
+    <span class="whitespace-nowrap">{place}</span>
+
+    {
+      emailItem && (
+        <>
+          <span class="text-gray-400" aria-hidden="true">
+            |
+          </span>
+          <a
+            href={`mailto:${emailItem.link}`}
+            class="inline-flex items-center gap-1 underline hover:no-underline whitespace-nowrap"
+          >
+            <Mail class="w-4 h-4" />
+            {emailItem.link}
+          </a>
+        </>
+      )
+    }
+
+    {
+      linkedInItem && (
+        <>
+          <span class="text-gray-400" aria-hidden="true">
+            |
+          </span>
+          <a
+            href={linkedInItem.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1 underline hover:no-underline whitespace-nowrap"
+          >
+            <Linkedin class="w-4 h-4" />
+            Linkedin Mateo Maldonado
+          </a>
+        </>
+      )
+    }
+
+    <>
+      <span class="text-gray-400" aria-hidden="true">|</span>
+      <a
+        href="https://mateomaldonado.com/es"
+        target="_blank"
+        class="inline-flex items-center gap-1 underline hover:no-underline whitespace-nowrap"
+      >
+        <Earth class="w-4 h-4" />
+        mateomaldonado.com/es
+      </a>
+    </>
+  </div>
+</div>
