@@ -1,0 +1,54 @@
+---
+import type { Education } from "../../data/info.type";
+import Section from "./section-cv.astro";
+import { getLangFromUrl, useTranslations } from "../../utils/languaje.utils";
+interface Props {
+  experienciaLaboral: Education;
+}
+
+
+
+const { experienciaLaboral } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+
+const isFutureDate = (dateStr: string):string => {
+  const currentDate = new Date();
+  const date = new Date(dateStr);
+  return date > currentDate ? t("actualmente") : dateStr;
+};
+
+// Convierte un párrafo largo en viñetas cortas y legibles para un CV
+const toBulletPoints = (text?: string): string[] => {
+    if (!text) return [];
+    return text
+        // Dividir por saltos de línea, puntos, punto y coma o viñetas "•"
+        .split(/\r?\n|\u2022|;|\.(\s+|$)/g)
+        // El split con grupos deja undefined; limpiar y normalizar espacios
+    .map((s) => (s ? s.trim().replace(/\s+/g, " ") : ""))
+    .filter((s) => s.length > 0)
+    // Asegurar que cada viñeta finalice con punto
+    .map((s) => (/([.!?])$/.test(s) ? s : `${s}.`));
+};
+---
+
+<Section title={t("Education")} >
+    {
+        experienciaLaboral.map(({ institucion, titulo, fechaDesde, fechaHasta, descripcionDetallada }) => {
+            return (
+                <div class="mb-4">
+                    <h3 class="text-lg font-bold mb-0.5">{titulo} | {institucion}</h3>
+                                        <p class="text-sm text-gray-500 mb-1">{fechaDesde} - {isFutureDate(fechaHasta)}</p>
+                                        {descripcionDetallada && (
+                                            <ul class=" list-inside text-base text-gray-700 space-y-1">
+                                                {toBulletPoints(descripcionDetallada).map((item) => (
+                                                    <li>{item}</li>
+                                                ))}
+                                            </ul>
+                                        )}
+                </div>
+            )
+        })
+    }
+</Section>

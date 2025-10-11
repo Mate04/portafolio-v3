@@ -36,6 +36,7 @@ export type Education = Array<{
   fechaHasta: string;
   certificadoPDF: string;
   descripcion?: string;
+  descripcionDetallada?: string;
 }>;
 
 export type Skills = Array<{

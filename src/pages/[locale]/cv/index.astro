@@ -9,6 +9,7 @@ export function getStaticPaths() {
 }
 import WorkExperience from "../../../components/cv/profesional-experience.astro";
 import Skills from "../../../components/cv/skills-cv.astro";
+import EducationExperience from '../../../components/cv/education-experience.astro'
 
 const { locale } = Astro.params;
 
@@ -23,6 +24,7 @@ const {
   habilidades,
   habilidadesBlandas,
   contacto,
+  educacion
 } = informacion;
 
 ---
@@ -34,13 +36,16 @@ const {
         
       {/*<hr class="mt-2 border-t border-gray-300 dark:border-gray-600" />*/}
     </div>
-    <p class="cv-description">{descripcionPerfilExtensa}</p>
+    <p class="cv-description ">{descripcionPerfilExtensa}</p>
   </div>
   <div class="cv-container mt-8">
     <WorkExperience experienciaLaboral={experienciasLaborales} />
   </div>
   <div class="cv-container mt-8">
     <Skills hardSkills={habilidades} softSkills={habilidadesBlandas} />
+  </div>
+  <div class="cv-container mt-8">
+    <EducationExperience experienciaLaboral={educacion}/>
   </div>
 </Layout>
 

@@ -1,25 +1,25 @@
 {
   "nombre": "Mateo Maldonado",
-  "descripcionPerfil": "Systems Engineer with over 5 years of industry experience, currently pursuing a university degree. Specialized in developing innovative technological solutions, with a strong focus on continuous learning and professional growth.",
-  "descripcionPerfilExtensa": "Systems Engineer with over 5 years of experience in the tech industry, currently pursuing a university degree at the National Technological University. Passionate about the design, development, and implementation of innovative technological solutions that generate real impact in organizations. Throughout my career, I have worked on projects of varying complexity — from the development of scalable and secure backend systems to the creation of user-centered web interfaces — applying agile methodologies and software engineering best practices. I stand out for my ability to integrate technical vision with project management, leading development processes focused on quality, continuous improvement, and interdisciplinary collaboration. My professional goal is to continue growing as an engineer and contribute to the development of digital products that optimize processes and enhance business value.",
+  "descripcionPerfil": "Systems Engineer with over 5 years of experience in the industry, currently pursuing a university degree. Specialized in developing innovative technological solutions, with a strong focus on continuous learning and professional growth.",
+  "descripcionPerfilExtensa": "Systems Engineer with over 5 years of experience in the technology industry, currently studying at the National Technological University. Passionate about the design, development, and implementation of innovative technological solutions that generate real impact within organizations. Throughout my career, I have worked on projects of varying complexity — from the development of scalable and secure backend systems to the creation of user-centered web interfaces — applying agile methodologies and software engineering best practices. I stand out for my ability to integrate technical vision with project management, leading development processes oriented toward quality, continuous improvement, and interdisciplinary collaboration. My professional goal is to continue growing as an engineer and contribute to the development of digital products that optimize processes and enhance business value.",
   "puesto": "Information Systems Engineer",
   "contacto": {
     "ciudadPais": "Córdoba, Argentina",
     "redesSociales": [
       { "nombre": "Mail", "link": "mateoemaldonado@gmail.com" },
-      { "nombre": "Linkedin", "link": "https://www.linkedin.com/in/mateomaldonado" },
+      { "nombre": "Linkedin", "link": "https://www.linkedin.com/in/mateomaldonado/" },
       { "nombre": "GitHub", "link": "https://github.com/Mate04" },
-      { "nombre": "Discord", "link": "not available yet haha" }
+      { "nombre": "Discord", "link": "not yet available haha" }
     ]
   },
   "experienciasLaborales": [
     {
       "empresa": "Lotería de Córdoba",
-      "cargo": "Backend Developer – Online Gaming",
+      "cargo": "Backend Developer - Online Gaming",
       "fechaDesde": "11, 24",
       "fechaHasta": "present",
-      "descripcionPuesto": "Developer of the responsible gaming system for user regulation in the province of Córdoba.",
-      "descripcionPuestoExtensa": "In charge of the design, development, and maintenance of the online gaming system of Lotería de Córdoba, focused on ensuring regulatory compliance and user safety within the framework of responsible gaming. I implemented scalable backend services based on microservices architecture using NestJS and TypeScript, integrated with Oracle databases. Closely collaborated with QA, infrastructure, and product teams to optimize authentication flows, user management, and real-time transaction processing. Additionally, I contributed to deployment automation through Docker and GitHub Actions, ensuring code traceability and final product quality.",
+      "descripcionPuesto": "Developer of a responsible gaming system for user regulation within the province of Córdoba.",
+      "descripcionPuestoExtensa": "Responsible for the design, development, and maintenance of Lotería de Córdoba’s online gaming system, aimed at ensuring regulatory compliance and user security within the framework of responsible gaming. I implemented scalable backend services based on a microservices architecture using NestJS and TypeScript, integrated with Oracle databases. Collaborated closely with QA, infrastructure, and product teams to optimize authentication flows, user management, and real-time transaction processing. Additionally, participated in deployment automation using Docker and GitHub Actions, ensuring code traceability and final product quality.",
       "habilidades": [
         "API Developer",
         "Nest",
@@ -35,8 +35,8 @@
       "cargo": "Web Developer",
       "fechaDesde": "01, 24",
       "fechaHasta": "03, 24",
-      "descripcionPuesto": "Responsible for the design and development of OctiGames' website.",
-      "descripcionPuestoExtensa": "Led the full development of OctiGames' corporate website, from interface design to front-end and back-end implementation. Utilized modern technologies like Next.js, React, and JavaScript to create a smooth, appealing, and SEO-optimized user experience. Worked with the design team to translate prototypes into reusable and accessible components, ensuring visual and functional consistency. Applied agile development practices and version control using GitHub, prioritizing code quality, scalability, and project maintainability.",
+      "descripcionPuesto": "Responsible for the design and development of the OctiGames corporate website.",
+      "descripcionPuestoExtensa": "In charge of the complete development of the OctiGames corporate website, from interface design to front-end and back-end implementation. I used modern technologies such as Next.js, React, and JavaScript to create a smooth, engaging, and SEO-optimized user experience. Collaborated with the design team to translate prototypes into reusable and accessible components, ensuring visual and functional consistency across the product. Implemented agile development and version control practices with GitHub, prioritizing code quality, scalability, and project maintainability.",
       "habilidades": [
         "JavaScript",
         "User Experience",
@@ -55,10 +55,11 @@
       "fechaDesde": "2022",
       "fechaHasta": "2027",
       "certificadoPDF": "",
-      "descripcion": "Currently enrolled. Specialization in software development and system architecture."
+      "descripcion": "Currently pursuing a degree with a specialization in software development and system architecture.",
+      "descripcionDetallada": "Currently studying Systems Engineering at the National Technological University, with a focus on software development, scalable architecture design, project management, and agile methodologies. The curriculum integrates knowledge in programming, databases, networks, software engineering, and process optimization, reinforcing a comprehensive vision of technology applied to business."
     },
     {
-      "titulo": "High School Diploma (ESO Equivalent)",
+      "titulo": "High School Diploma",
       "institucion": "Centro Educacional San Jorge",
       "fechaDesde": "2008",
       "fechaHasta": "2021",
@@ -69,7 +70,7 @@
     { "nombre": "UI/UX", "areas": ["Frontend"] },
     { "nombre": "User Experience", "areas": ["Frontend"] },
     { "nombre": "System Design", "areas": ["Product manager"] },
-    { "nombre": "Relational Databases", "areas": ["Database"] },
+    { "nombre": "Relational Database", "areas": ["Database"] },
     { "nombre": "Project Management", "areas": ["Product manager"] },
     { "nombre": "JavaScript", "areas": ["Frontend", "Backend"] },
     { "nombre": "Python", "areas": ["Backend"] },
@@ -92,7 +93,7 @@
     { "nombre": "Git", "areas": ["DevOps", "Backend", "Frontend"] },
     { "nombre": "PostgreSQL", "areas": ["Database"] },
     { "nombre": "Nest", "areas": ["Backend"] },
-    { "nombre": "REST API", "areas": ["Backend"] },
+    { "nombre": "API REST", "areas": ["Backend"] },
     { "nombre": "API Development", "areas": ["Backend"] }
   ],
   "idiomas": [
@@ -101,7 +102,7 @@
   ],
   "habilidadesBlandas": [
     "Ability to work effectively in diverse teams.",
-    "Analytical thinking to identify and resolve problems efficiently.",
+    "Analytical thinking to identify and solve problems efficiently.",
     "Openness to feedback and willingness to improve.",
     "Ability to balance multiple projects and responsibilities."
   ]

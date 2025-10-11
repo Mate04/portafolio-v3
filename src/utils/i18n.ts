@@ -15,7 +15,8 @@ export const ui = {
     'Skills': 'Habilidades',
     'work-title':'Experiencia laboral',
     'soft-skills':'Habilidades Blandas',
-    'hard-skills':'Habilidades Técnicas'
+    'hard-skills':'Habilidades Técnicas',
+    'actualmente':'Actualmente',
   },
   en: {
     'title': 'Information Systems Engineer',
@@ -26,6 +27,7 @@ export const ui = {
     'Skills': 'Skills',
     'work-title':'Work experience',
     'soft-skills':'Soft Skills',
-    'hard-skills':'Hard Skills'
+    'hard-skills':'Hard Skills',
+    'actualmente':'Currently',
   }
 } as const;
