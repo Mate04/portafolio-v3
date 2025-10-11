@@ -10,6 +10,8 @@ export function getStaticPaths() {
 import WorkExperience from "../../../components/cv/profesional-experience.astro";
 import Skills from "../../../components/cv/skills-cv.astro";
 import EducationExperience from '../../../components/cv/education-experience.astro'
+import Section from '../../../components/cv/section-cv.astro'
+import { getLangFromUrl, useTranslations } from "../../../utils/languaje.utils";
 
 const { locale } = Astro.params;
 
@@ -27,6 +29,9 @@ const {
   educacion
 } = informacion;
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 
 <Layout>
@@ -36,7 +41,9 @@ const {
         
       {/*<hr class="mt-2 border-t border-gray-300 dark:border-gray-600" />*/}
     </div>
+    <Section title={t("perfil")}>
     <p class="cv-description ">{descripcionPerfilExtensa}</p>
+    </Section>
   </div>
   <div class="cv-container mt-8">
     <WorkExperience experienciaLaboral={experienciasLaborales} />
