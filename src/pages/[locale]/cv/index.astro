@@ -28,7 +28,8 @@ const {
   habilidades,
   habilidadesBlandas,
   contacto,
-  educacion
+  educacion,
+  idiomas
 } = informacion;
 
 const lang = getLangFromUrl(Astro.url);
@@ -52,7 +53,7 @@ const t = useTranslations(lang);
     <WorkExperience experienciaLaboral={experienciasLaborales} />
   </div>
   <div class="cv-container mt-8">
-    <Skills hardSkills={habilidades} softSkills={habilidadesBlandas} />
+    <Skills hardSkills={habilidades} softSkills={habilidadesBlandas} languajes={idiomas} />
   </div>
   <div class="cv-container mt-8">
     <EducationExperience experienciaLaboral={educacion}/>

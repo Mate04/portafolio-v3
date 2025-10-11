@@ -1,14 +1,15 @@
 ---
-import type { Skills } from "../../data/info.type";
+import type { Skills, Languaje } from "../../data/info.type";
 import { getLangFromUrl, useTranslations } from "../../utils/languaje.utils";
 import Section from "./section-cv.astro";
 
 interface Props {
   hardSkills: Skills;
   softSkills: string[];
+  languajes: Languaje;
 }
 
-const { hardSkills: skills, softSkills } = Astro.props;
+const { hardSkills: skills, softSkills, languajes } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -57,5 +58,19 @@ if (skills && skills.length) {
         </div>
       )
     }
+  </div>
+  <div>
+    <h2 class="uppercase font-semibold text-base tracking-wide mb-1">
+      {t("languaje")}
+    </h2>
+    <ul class="leading-snug">
+      {
+        languajes.map(({ nivel, idioma }) => (
+          <li class="">
+            {idioma} - {nivel}
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </Section>
